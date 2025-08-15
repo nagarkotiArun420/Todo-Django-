@@ -1,3 +1,58 @@
+/* =====================
+   Welcome Page Styles
+   ===================== */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Welcome Page Styles */
+.welcome-container h1 {
+    font-family: 'Poppins', sans-serif; /* New modern font */
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.welcome-container .quote {
+    font-family: 'Poppins', sans-serif; /* Matching font */
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ccc;
+    max-width: 600px;
+}
+
+
+.get-started-btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 576px) {
+    .welcome-container h1 {
+        font-size: 2.2rem;
+    }
+    .welcome-container .quote {
+        font-size: 1.1rem;
+    }
+    .get-started-btn {
+        width: 100%;
+    }
+}
+
 
 body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Modern dark gradient */

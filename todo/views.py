@@ -3,22 +3,25 @@ from django.shortcuts import get_object_or_404, redirect, render
 from todo.models import Task
 
 # Create your views here.
+
+
+
 def addTask(request):
     task = request.POST['task']
     Task.objects.create(task = task)
-    return redirect('home')
+    return redirect('manange')
 
 def mark_as_done(request, pk):
     task = get_object_or_404(Task, pk=pk)
     task.is_completed = True
     task.save()
-    return redirect('home')
+    return redirect('manage')
 
 def mark_as_undone(request, pk):
     task = get_object_or_404(Task, pk=pk)
     task.is_completed = False
     task.save()
-    return redirect('home')
+    return redirect('manage')
 
 def update_task(request, pk):
     get_task = get_object_or_404(Task, pk=pk)
@@ -26,7 +29,7 @@ def update_task(request, pk):
         new_task = request.POST['task']
         get_task.task = new_task
         get_task.save()
-        return redirect('home')
+        return redirect('manage')
         
     else:
         context= {
@@ -38,5 +41,5 @@ def update_task(request, pk):
 def delete_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     task.delete()
-    return redirect('home')
+    return redirect('manage')
     
