@@ -1,0 +1,189 @@
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Modern dark gradient */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h3, h4, h5 {
+    font-weight: 600;
+}
+
+
+.container {
+    margin-top: 20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
+.card {
+    background: rgba(30, 30, 30, 0.85); 
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+
+.btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn i {
+    font-size: 0.9rem;
+}
+
+/* Button colors */
+.btn-success {
+    background: #28a745;
+    color: #fff;
+}
+.btn-success:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+.btn-danger:hover {
+    background: #b52a37;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #0069d9;
+    transform: translateY(-2px);
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #000;
+}
+.btn-warning:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+
+.form-control {
+    background: #1f1f1f;
+    border: 1px solid #444;
+    color: #f5f5f5;
+    border-radius: 0.4rem;
+    padding: 10px 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 6px rgba(0, 180, 216, 0.6);
+    outline: none;
+}
+
+
+.add-task-section {
+    margin-top: 50px; 
+    display: flex;
+    gap: 8px;
+}
+
+.add-task-section .form-control {
+    flex: 1;
+}
+
+.add-task-section .btn {
+    min-width: 160px;
+}
+
+
+.update-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.update-card {
+    background: rgba(30, 30, 30, 0.85);
+    padding: 30px;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.update-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 768px) {
+    .col-md-7, .col-md-5, .col-md-6 {
+        width: 100% !important;
+        position: static !important;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .add-task-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .update-card .form-group {
+        flex-direction: column;
+    }
+
+    .update-card .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
