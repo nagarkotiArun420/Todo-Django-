@@ -9,7 +9,7 @@ from todo.models import Task
 def addTask(request):
     task = request.POST['task']
     Task.objects.create(task = task)
-    return redirect('manange')
+    return redirect('manage')
 
 def mark_as_done(request, pk):
     task = get_object_or_404(Task, pk=pk)
