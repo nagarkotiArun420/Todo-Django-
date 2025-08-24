@@ -61,6 +61,16 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-6 p-0" style="position: absolute; bottom: 50px;">
+
+                {% if messages %}
+                 {% for message in messages %}
+                 <div class="alert alert-{{ message.tags }}"> {{message}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+
+
                 <!-- To Do Form -->
                 <form action="{% url 'addTask' %}"  method="POST">
                     {% csrf_token %}
